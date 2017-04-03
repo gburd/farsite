@@ -1,0 +1,360 @@
+{
+    "compile": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "42.0.0",
+            "requested": "42.+"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.16",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.7.25",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-core": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "default": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "42.0.0",
+            "requested": "42.+"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.16",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.7.25",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-core": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "runtime": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "42.0.0",
+            "requested": "42.+"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.16",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.7.25",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-core": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "testCompile": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "junit:junit": {
+            "locked": "4.12",
+            "requested": "4.12"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "42.0.0",
+            "requested": "42.+"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.16",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.7.25",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-core": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    },
+    "testRuntime": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "requested": "1.+"
+        },
+        "com.github.javafaker:javafaker": {
+            "locked": "0.13",
+            "requested": "0.+"
+        },
+        "com.google.guava:guava": {
+            "locked": "21.0",
+            "requested": "21.+"
+        },
+        "io.dropwizard.metrics:metrics-core": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-graphite": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-healthchecks": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.dropwizard.metrics:metrics-jvm": {
+            "locked": "3.2.2",
+            "requested": "3.+"
+        },
+        "io.riemann:metrics3-riemann-reporter": {
+            "locked": "0.4.3",
+            "requested": "0.+"
+        },
+        "javax.inject:javax.inject": {
+            "locked": "1",
+            "requested": "1"
+        },
+        "joda-time:joda-time": {
+            "locked": "2.9.9",
+            "requested": "2.+"
+        },
+        "junit:junit": {
+            "locked": "4.12",
+            "requested": "4.12"
+        },
+        "org.eclipse.persistence:eclipselink": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:javax.persistence": {
+            "locked": "2.1.1",
+            "requested": "2.+"
+        },
+        "org.eclipse.persistence:org.eclipse.persistence.jpa": {
+            "locked": "2.6.4",
+            "requested": "2.+"
+        },
+        "org.postgresql:postgresql": {
+            "locked": "42.0.0",
+            "requested": "42.+"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.16.16",
+            "requested": "1.+"
+        },
+        "org.slf4j:log4j-over-slf4j": {
+            "locked": "1.7.25",
+            "requested": "1.+"
+        },
+        "org.zalando:logbook-core": {
+            "locked": "1.1.1",
+            "requested": "1.+"
+        }
+    }
+}

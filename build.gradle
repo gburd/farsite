@@ -1,0 +1,106 @@
+// gradle wrapper
+// ./gradlew clean generateLock saveLock
+// ./gradlew compileJava
+// ./gradlew run
+// ./gradlew run --debug-jvm
+
+buildscript {
+    ext {
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://clojars.org/repo" }
+    }
+    dependencies {
+        classpath 'com.netflix.nebula:gradle-dependency-lock-plugin:4.+'
+        classpath 'com.uber:okbuck:0.19.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'com.uber.okbuck'
+apply plugin: 'nebula.dependency-lock'
+apply plugin: 'application'
+
+mainClassName = "com.example.farsite.Main"
+applicationDefaultJvmArgs = ["-Dgreeting.language=en"]
+
+task execute(type:JavaExec) {
+   classpath = sourceSets.main.runtimeClasspath
+   main = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "com.example.farsite.Main"
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+    baseName = ''
+    version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://clojars.org/repo" }
+}
+
+configurations {
+    compile.exclude module: 'spring-boot-starter-tomcat'
+    compile.exclude module: 'tomcat-jdbc'
+}
+
+configurations.all {
+    exclude group: "org.slf4j", module: "slf4j-log4j12"
+    exclude group: "log4j", module: "log4j"
+}
+
+dependencies {
+    // Some Java Extras
+    compile group: 'javax.inject', name: 'javax.inject', version: '1'
+
+    // Google Guava, "For all the Goodness(TM)"
+    compile group: 'com.google.guava', name: 'guava', version: '21.+'
+
+    // Joda Time, "Because time is hard(TM)"
+    compile group: 'joda-time', name: 'joda-time', version: '2.+'
+
+    // Lombok, "Where less is more(TM)"
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.+'
+
+    // Entity Storage (aka. txn{CRUD}), "Things necessary for data persistence"
+    // - CockroachDB (the *clustered, scale-out* PostgreSQL server)
+    // - HikariCP (Connection Pooling)
+    // - EclipseLink (ORM)
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.+'
+    compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.+'
+    compile group: 'org.eclipse.persistence', name: 'javax.persistence', version: '2.+'
+    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.+'
+
+
+    // Dropwizard (aka. CodaHale) Metrics, "Measure all the things!(TM)"
+    compile group: 'io.dropwizard.metrics', name: 'metrics-core', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-jvm', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-healthchecks', version: '3.+'
+    compile group: 'io.dropwizard.metrics', name: 'metrics-graphite', version: '3.+'
+    compile group: 'io.riemann', name: 'metrics3-riemann-reporter', version: '0.+'
+
+    // Logging for Java, "Visibility proceeds insight(TM)"
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.+'
+    compile group: 'org.slf4j', name: 'log4j-over-slf4j', version: '1.+'
+    compile group: 'org.zalando', name: 'logbook-core', version: '1.+'
+
+    // Fake data generator
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.+'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2'
+}
