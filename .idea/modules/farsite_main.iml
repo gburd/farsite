@@ -39,6 +39,16 @@
         </option>
       </configuration>
     </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="" />
+        <datasource-mapping>
+          <factory-entry name="employee" />
+        </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/../../src/main/resources/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../build/classes/main" />
@@ -50,8 +60,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="library" name="Gradle: joda-time:joda-time:2.9.9" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.rholder.fauxflake:fauxflake-core:1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.16" level="project" />
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:42.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:eclipselink:2.6.4" level="project" />

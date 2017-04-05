@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- https://jcp.org/aboutJava/communityprocess/final/jsr338/index.html -->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="employee" transaction-type="RESOURCE_LOCAL">
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <class>com.example.farsite.model.Address</class>
+        <class>com.example.farsite.model.Employee</class>
+        <class>com.example.farsite.model.EmploymentPeriod</class>
+        <class>com.example.farsite.model.Gender</class>
+        <class>com.example.farsite.model.GenderConverter</class>
+        <class>com.example.farsite.model.PhoneNumber</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="eclipselink.session.customizer" value="com.example.farsite.util.CrDBSessionCustomizer"/>
+
+            <!-- EclipseLink should create the database schema automatically -->
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="eclipselink.target-database" value="com.example.farsite.util.CockroachDBPlatform"/>
+
+            <property name="eclipselink.logging.logger" value="JavaLogger"/>
+            <property name="eclipselink.logging.timestamp" value="false"/>
+            <property name="eclipselink.logging.thread" value="false"/>
+            <property name="eclipselink.logging.session" value="false"/>
+            <property name="eclipselink.logging.exceptions" value="false"/>
+            <property name="eclipselink.logging.connection" value="false"/>
+            <property name="eclipselink.logging.level.metadata" value="WARNING"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+
+            <property name="eclipselink.profiler" value="org.eclipse.persistence.tools.profiler.PerformanceProfiler"/>
+
+            <!--  Optimization - statement caching -->
+            <property name="eclipselink.jdbc.cache-statements" value="true"/>
+            <!--  Optimization - batch writing -->
+            <property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+            <property name="eclipselink.jdbc.batch-writing.size" value="1000"/>
+            <!--  Optimization - disable caching for batch insert (caching only improves reads, so only adds overhead for inserts) -->
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <!--  Except for XXX which is shared by orders
+            <property name="eclipselink.cache.shared.Customer" value="true"/> TODO(gburd): ? -->
+            <!--  Optimization - turn logging off
+            <property name="eclipselink.logging.level" value="off" /> -->
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <!--  Optimization - close EntityManager on commit, to avoid cost of resume -->
+            <property name="eclipselink.persistence-context.close-on-commit" value="true"/>
+            <!--  Optimization - avoid auto flush cost on query execution -->
+            <property name="eclipselink.persistence-context.flush-mode" value="commit"/>
+            <!--  Optimization - avoid cost of persist on commit -->
+            <property name="eclipselink.persistence-context.persist-on-commit" value="false"/>
+            <!-- Optimization -  -->
+            <property name="eclipselink.jdbc.bind-parameters" value="true"/>
+            <!--  Optimization - create indexes for all foreign key fields -->
+            <property name="eclipselink.ddl-generation.index-foreign-keys" value="true"/>
+            <!-- Optimization - enable query caching -->
+            <property name="eclipselink.cache.query-results" value="true"/>
+            <!-- <property name="eclipselink.cache.database-event-listener" value="DCN"/> -->
+        </properties>
+    </persistence-unit>
+</persistence>
